@@ -1,4 +1,4 @@
-<%@taglib prefix="c" url="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -14,20 +14,19 @@
             la barra de direcciones con valores A,S,I ej. ?estado=A</p>
     <c:choose>
         <c:when test="${param.estado=='A'}">
-            <h4 style="color:blue">ACTIVO</h4>
-            </c:when>
+        <h4 style="color:blue">ACTIVO</h4>
+        </c:when>
         <c:when test="${param.estado=='S'}">
             <h4 style="color:red">SUSPENDIDO</h4>
-            </c:when>
+        </c:when>
         <c:when test="${param.estado=='I'}">
             <h4 style="color:green">INACTIVO</h4>
-            </c:when>
-
-          <c:otherwise>
-            <p>***SIN ESTADO***</p>
-            
+        </c:when>
+        <c:otherwise>
+              <p>***SIN ESTADO***</p>
         </c:otherwise>
-          </c:choose>
+    </c:choose>
+
       
         <a href="index.jsp">Volver</a>
     </body>

@@ -1,4 +1,4 @@
-<%@taglib prefix="c" url="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,6 +12,8 @@
       <h1>Ejemplo del foreach</h1>
         <p>Los elementos de la coleccion son:</p>
         
+
+        
         <table border="1">
             <tr>
                 <th>Id</th>
@@ -19,14 +21,14 @@
                 <th>Telefono</th>
                 <th>Correo</th>
             </tr>
-            <c:forEach var="item" items="${sessionScope.listaper}">
-            <tr>
+    <c:forEach var="item" items="${sessionScope.listaper}">
+        <tr>
                 <th>${item.id}</th>
                 <th>${item.nombre}</th>
                 <th>${item.telefono}</th>
                 <th>${item.correo}</th>
             </tr>
-            </c:foreach>
+    </c:forEach>
         </table>
       
         <a href="index.jsp">Volver</a>
